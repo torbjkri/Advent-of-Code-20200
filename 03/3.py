@@ -7,17 +7,16 @@ def priority(same):
     else:
         return ord(same) - ord('a') + 1
 
+def find_badge(lists):
+    return [c for c in lists[0] if c in lists[1] and c in lists[2]][0]
+
 
 def one():
     data = open("03/data.txt", 'r').read().split('\n')
-
     data = [[x[:len(x)//2], x[len(x)//2:]] for x in data]
     total = sum([priority(find_same(x)) for x in data])
 
     print(total)
-
-def find_badge(lists):
-    return [c for c in lists[0] if c in lists[1] and c in lists[2]][0]
 
 def two():
     data = open("03/data.txt", 'r').read().split('\n')
