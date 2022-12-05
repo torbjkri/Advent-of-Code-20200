@@ -23,8 +23,7 @@ def is_overlap2(pair):
 
 def one():
     data = open("04/data.txt", 'r').read().split('\n')
-    data = [x.split(',') for x in data]
-    data = [ [x.split('-') for x in line]  for line in data]
+    data = [ map(lambda x: x.split('-'), x.split(',')) for x in data]
     data = [ [[int(y) for y in x] for x in line] for line in data]
 
     total = 0
