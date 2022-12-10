@@ -44,7 +44,7 @@ def draw(drawn):
         image.append(line[:])
     
     for line in image:
-        print(line)
+        print(''.join(line))
 
 def two():
     data = open("10/data.txt", 'r').read().split('\n')
