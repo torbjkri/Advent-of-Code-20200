@@ -40,7 +40,7 @@ def draw(drawn):
             if pos in drawn:
                 line.append('#')
             else:
-                line.append('.')
+                line.append(' ')
         image.append(line[:])
     
     for line in image:
